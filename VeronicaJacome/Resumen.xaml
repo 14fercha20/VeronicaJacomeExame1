@@ -4,9 +4,28 @@
              x:Class="VeronicaJacome.Resumen">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid Margin="20,35,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                    <RowDefinition  />
+
+                </Grid.RowDefinitions>
+
+
+                <Label Grid.Row="0"  Text="Usuario:" />
+                <Entry Grid.Column="1" Grid.Row="0" x:Name="txtUsuario" IsReadOnly="True" ></Entry>
+
+                <Label Grid.Row="1"  Text="Nombre:" />
+                <Entry Grid.Column="1" Grid.Row="1" x:Name="txtNombre" IsReadOnly="True" ></Entry>
+
+
+
+            </Grid>
+            <Label x:Name="lblTotal" FontSize="20" TextColor="Red" Margin="20,10,0,0"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

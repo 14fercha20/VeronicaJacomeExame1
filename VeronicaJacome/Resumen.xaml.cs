@@ -12,10 +12,12 @@ namespace VeronicaJacome
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(string usuario, string nombre, double total)
+        public Resumen(String usuario, String nombre, String Total)
         {
             InitializeComponent();
-
+            txtUsuario.Text = usuario;
+            txtNombre.Text = nombre;
+            lblTotal.Text = Total;
         }
     }
 }

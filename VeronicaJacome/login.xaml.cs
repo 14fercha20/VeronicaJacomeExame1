@@ -17,15 +17,28 @@ namespace VeronicaJacome
             InitializeComponent();
         }
 
-        private async void btnAbrir_Clicked(object sender, EventArgs e)
+        private async void btnIngresar_Clicked(object sender, EventArgs e)
         {
-            if (txtContrasenia.Text.Equals("uisrael2021") && txtUsuario.Text.Equals("estudiante2021"))
+            try
             {
-                await Navigation.PushAsync(new Registro(txtUsuario.Text, txtContrasenia.Text));
+                if (txtUsuario.Text.Equals("") && txtContrasenia.Text.Equals(""))
+                {
+                    DisplayAlert("Aviso", "Campos vacíos", "OK");
+                }
+                else
+                {
+                    if (txtUsuario.Text.Equals("estudiante2021") && txtContrasenia.Text.Equals("uisrael2021"))
+                    {
+                        await Navigation.PushAsync(new Registro(txtUsuario.Text));
+                    }
+                    else
+                    {
+                        DisplayAlert("Aviso", "Usuario o contraseña incorrectos", "OK");
+                    }
+                }
             }
-            else
+            catch (Exception)
             {
-                DisplayAlert("Alerta", "usuario o contraseña erróneos", "cerrar");
 
             }
         }
