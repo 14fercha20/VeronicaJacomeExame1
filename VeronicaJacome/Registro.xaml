@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VeronicaJacome.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+           
+            <Label x:Name="lbTexto" Text="-" FontSize="Title" Padding="30,10,30,10"/>
+
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="-" FontSize="Title" Padding="30,10,30,10"/>
+            <Grid Padding="30,10,30,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+         
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre:"></Label>
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtNombre" Keyboard="Numeric"  ></Entry>                <Label Grid.Row="1" Grid.Column="0" Text="Monto inicial:"></Label>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtMontoInicial" Keyboard="Numeric"  ></Entry>
+                <Label Grid.Row="2" Grid.Column="0" Text="Pago mensual:"></Label>
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="txtPagoMensual" Keyboard="Numeric"  ></Entry>
+                
+                <Button Text="Guardar" Grid.Row="7" Grid.Column="1" Clicked="Button_Clicked"></Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
